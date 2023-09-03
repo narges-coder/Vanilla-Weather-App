@@ -31,3 +31,29 @@ li {
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
+
+.overveiw {
+  margin-bottom: 20px;
+}
+.weather-tempersture img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
+}
+.weather-tempersture strong {
+  color: rgb (33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.weather-tempersture .units {
+  position: relative;
+  font-size: 16px;
+  top: 5px;
+}
+.farenhight {
+  text-decoration: none;
+}
+.footer {
+  text-decoration: none;
+}
