@@ -99,3 +99,17 @@ fahrenheitLink.addEventListener("click", displayFahrenheitLink);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusLink);
+
+const body = document.querySelector("#weather-app");
+const date = new Date();
+const hour = date.getHours();
+
+if (hour < 12) {
+  body.style.background =
+    "radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);";
+} else if (hour < 18) {
+  body.style.background =
+    "radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%)";
+} else {
+  body.style.background = "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
+}

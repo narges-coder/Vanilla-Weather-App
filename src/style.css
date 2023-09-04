@@ -26,6 +26,10 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 600px;
   margin: 30px auto;
@@ -61,9 +65,5 @@ li:first-letter {
 }
 
 .weather-tempersture .active:hover {
-  text-decoration: none;
-}
-
-a {
   text-decoration: none;
 }
