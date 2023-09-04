@@ -53,7 +53,20 @@ function displayTempwrature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let apiKey = "fdof3aee8t54cb045d2c608a610c47ef";
-let city = "lisbon";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTempwrature);
+function search(city) {
+  let apiKey = "fdof3aee8t54cb045d2c608a610c47ef";
+
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTempwrature);
+}
+
+function handelSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Kabul");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handelSubmit);
