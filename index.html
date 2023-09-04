@@ -25,6 +25,7 @@
                 placeholder="Type a city.."
                 class="form-control"
                 id="city-input"
+                autocomplete="off"
               />
             </div>
             <div class="col-3">
@@ -49,7 +50,12 @@
               <img src="" alt="" id="icon" />
               <strong id="temperature"></strong>
               <small class="units"
-                >°C | °<a href="#" class="farenhight">F</a></small
+                >°<a href="#" id="celsius-link" class="active">C</a> | °<a
+                  href="#"
+                  class="fahrenheit"
+                  id="fahrenheit-link"
+                  >F</a
+                ></small
               >
             </div>
           </div>
