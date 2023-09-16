@@ -100,16 +100,31 @@ fahrenheitLink.addEventListener("click", displayFahrenheitLink);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusLink);
 
-const body = document.querySelector("#weather-app");
-const date = new Date();
-const hour = date.getHours();
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
-if (hour < 12) {
-  body.style.background =
-    "radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);";
-} else if (hour < 18) {
-  body.style.background =
-    "radial-gradient(circle at 10% 20%, rgb(254, 255, 165) 0%, rgb(255, 232, 182) 90%)";
-} else {
-  body.style.background = "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)";
+  let forecastHtml = `<div class="row">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `  <div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                alt=""
+                width="45"
+              />
+
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max"> 18° </span>
+                <span class="weather-forecast-temperature-min"> 12° </span>
+              </div>
+          </div>
+         `;
+  });
+  forecastHtml = forecastHtml + `</div>`;
+  forecastElement.innerHTML = forecastHtml;
 }
+displayForecast();
