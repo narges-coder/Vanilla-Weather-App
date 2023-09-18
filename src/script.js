@@ -29,6 +29,7 @@ function displayTempwrature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   console.log(response.data);
+  console.log(response.data.coordinates);
 
   celsiusTemperature = response.data.temperature.current;
 
